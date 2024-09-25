@@ -3,8 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="index.js"></script>
+    <title>Nice</title>
+    <style>
+      button#botao {
+        font-size: 20px;
+        color: white;
+        background-color: rgb(109, 109, 172);
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <button
+      id="botao"
+      onclick="clicar()"
+      onmouseenter="entrou()"
+      onmouseout="saiu()"
+    >
+      Clique aqui
+    </button>
+    <script>
+      function clicar() {
+        let click = document.getElementById("botao");
+        click.innerText = "clicou";
+        click.style.background = "red";
+      }
+      function entrou() {
+        let enter = document.getElementById("botao");
+        enter.innerText = "entrou";
+        enter.style.background = "green";
+      }
+      function saiu() {
+        let out = document.getElementById("botao");
+        out.innerText = "saiu";
+        out.style.background = "yellow";
+        out.style.color = "black";
+      }
+    </script>
+  </body>
 </html>
